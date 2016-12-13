@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+    <persistence-unit name="hib-jpa-persistence-unit" transaction-type="RESOURCE_LOCAL">
+        <class>com.vityanchys.entities.CourseEntity</class>
+        <class>com.vityanchys.entities.DisciplineEntity</class>
+        <class>com.vityanchys.entities.GroupEntity</class>
+        <class>com.vityanchys.entities.LogEntity</class>
+        <class>com.vityanchys.entities.StudentEntity</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="toplink.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/stlog?autoReconnect=true&amp;useSSL=false"/>
+            <property name="toplink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/stlog?autoReconnect=true&amp;useSSL=false"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="openjpa.ConnectionURL"
+                      value="jdbc:mysql://localhost:3306/stlog?autoReconnect=true&amp;useSSL=false"/>
+            <property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/stlog?autoReconnect=true&amp;useSSL=false"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>
